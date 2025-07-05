@@ -31,14 +31,16 @@ function App() {
   // res = 0 --> game on , 1--> X won, 2--> O won, 3--> draw
   useEffect(()=>{
     const win:number[][] = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+    let ch = 0;
     for(let i=0;i<=7;i++) {
       const [a,b,c] = win[i];
       if(state[a]!==null && state[a]===state[b] && state[a]===state[c]) {
         setres(state[a] === "X" ? 1 : 2);
+        ch = 1;
         break;
       }
     }
-    if (state.every(cell => cell !== null)) {
+    if (ch==0 && state.every(cell => cell !== null)) {
       setres(3); 
     }
 

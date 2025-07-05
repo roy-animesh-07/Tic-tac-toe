@@ -24,7 +24,7 @@ A simple and fun Tic Tac Toe game built with **React**! This project demonstrate
 git clone https://github.com/yourusername/react-tic-tac-toe.git
 cd react-tic-tac-toe
 npm install
-npm start
+npm run dev
 
 markdown
 Copy
